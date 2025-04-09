@@ -1,4 +1,6 @@
 # 少数民族文化项目
+前端vue，现阶段只有首页和几个导航栏的界面
+革命尚未日成功，同志仍需努力（by yty）
 # minority-project
 
 This template should help get you started developing with Vue 3 in Vite.
