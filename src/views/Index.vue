@@ -4,6 +4,11 @@
     <!-- 顶部装饰 -->
     <div class="top-decoration"></div>
     
+    <!-- 右上角头像 -->
+    <div class="top-right-avatar">
+      <Avatar />
+    </div>
+    
     <!-- 导航栏 -->
     <nav class="ancient-nav" :class="{ 'fixed-nav': isNavFixed }">
       <ul>
@@ -28,7 +33,49 @@
             <p class="subtitle">探索少数民族的传统文化瑰宝</p>
             <h2>五十六个民族，五十六朵花</h2>
             <p>探索中国少数民族丰富多彩的文化遗产，感受千年传承的独特魅力</p>
-            <button class="explore-btn" @click="scrollToSection(1)">开始探索</button>
+            <a href="javascript:void(0)" class="explore-btn" @click="scrollToSection(1)">开始探索</a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 民族分布地图区块 -->
+      <section class="fullpage-section ethnic-map-preview" id="section-1">
+        <div class="section-content">
+          <div class="map-preview-content">
+            <div class="map-title">
+              <h2>中国少数民族分布地图</h2>
+              <p>探索中国55个少数民族的地理分布</p>
+            </div>
+            <div class="map-preview-container">
+              <div class="map-preview-image">
+                <div class="map-overlay">
+                  <router-link to="/ethnic-map" class="view-map-btn">查看完整地图</router-link>
+                </div>
+              </div>
+              <div class="map-preview-info">
+                <div class="info-card">
+                  <div class="info-icon">🏔️</div>
+                  <div class="info-content">
+                    <h3>地域广阔</h3>
+                    <p>少数民族主要分布在中国西南、西北、东北等地区</p>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">👥</div>
+                  <div class="info-content">
+                    <h3>人口众多</h3>
+                    <p>少数民族总人口超过1.2亿，占全国总人口约8.5%</p>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <div class="info-icon">🏮</div>
+                  <div class="info-content">
+                    <h3>文化多元</h3>
+                    <p>每个民族都有其独特的语言、服饰、节日和风俗习惯</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -37,7 +84,7 @@
       <section 
         v-for="(feature, index) in features" 
         :key="index" 
-        :id="`section-${index + 1}`"
+        :id="`section-${index + 2}`"
         class="fullpage-section feature-section"
         :style="{ backgroundImage: `url('${feature.bgImage}')` }"
       >
@@ -77,12 +124,20 @@
         @click="scrollToSection(index - 1)"
       ></span>
     </div>
+    
+    <!-- 添加AI助手组件 -->
+    <DeepSeekChat :api-key="deepseekApiKey" />
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
-import { useRoute } from 'vue-router'
+import Avatar from '../components/Avatar.vue'
+import DeepSeekChat from '../components/DeepSeekChat.vue'
+import { useRoute, useRouter } from 'vue-router'
+
+// DeepSeek API密钥
+const deepseekApiKey = 'sk-80ca30dec8f846ea8067f9740256aec6'
 
 // 响应式数据
 const isNavFixed = ref(false)
@@ -92,6 +147,7 @@ const fullpageContainer = ref(null)
 const touchStartY = ref(0)
 const touchEndY = ref(0)
 const scrollTimeout = ref(null)
+const router = useRouter()
 
 // 导航项数据
 const navItems = ref([
@@ -99,6 +155,7 @@ const navItems = ref([
   { title: '知识导航', path: '/knowledge' },
   { title: '风俗习惯', path: '/customs' },
   { title: '传统节日', path: '/festivals' },
+  { title: '民族地图', path: '/ethnic-map' },
   { title: '民族服饰', path: '/clothes' },
   { title: '民间艺术', path: '/art' },
   { title: '关于我们', path: '/about' }
@@ -111,8 +168,8 @@ const features = ref([
   { icon: '🍜', title: '饮食文化', desc: '品尝各民族的特色美食', bgImage: '/food-bg.svg' }
 ])
 
-// 计算总页面数量（首页 + 特色卡片 + 页脚）
-const totalSections = computed(() => features.value.length + 2)
+// 计算总页面数量（首页 + 地图 + 特色卡片 + 页脚）
+const totalSections = computed(() => features.value.length + 3)
 
 // 滚动到指定部分
 const scrollToSection = (index) => {
@@ -293,10 +350,18 @@ onUnmounted(() => {
   max-width: 100%;
 }
 
+.ancient-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
 .ancient-nav ul {
   display: flex;
   list-style: none;
   justify-content: center;
+  flex: 1;
 }
 
 .ancient-nav li {
@@ -365,6 +430,156 @@ onUnmounted(() => {
   padding: 0 20px;
   position: relative;
   z-index: 2;
+}
+
+/* 民族分布地图预览 */
+.ethnic-map-preview {
+  background-color: #f5f5f5;
+  background-image: url('https://www.transparenttextures.com/patterns/rice-paper-dark.png');
+  position: relative;
+}
+
+.ethnic-map-preview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(139, 90, 43, 0.1) 0%, rgba(139, 90, 43, 0.2) 100%);
+  z-index: 1;
+}
+
+.map-preview-content {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.map-title {
+  margin-bottom: 30px;
+}
+
+.map-title h2 {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 2.5rem;
+  color: #8B5A2B;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.map-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8B5A2B, transparent);
+  transform: translateX(-50%);
+}
+
+.map-title p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.map-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.map-preview-image {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  background-image: url('/map-preview.svg'); /* 需要添加地图预览图 */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.map-preview-image:hover .map-overlay {
+  opacity: 1;
+}
+
+.view-map-btn {
+  padding: 12px 25px;
+  background-color: #8B5A2B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.view-map-btn:hover {
+  background-color: #A67C52;
+  transform: translateY(-3px);
+}
+
+.map-preview-info {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  color: #8B5A2B;
+}
+
+.info-content h3 {
+  font-size: 1.3rem;
+  color: #8B5A2B;
+  margin-bottom: 5px;
+  font-family: 'Ma Shan Zheng', cursive;
+}
+
+.info-content p {
+  color: #666;
+  font-size: 1rem;
 }
 
 /* 首页部分 */
@@ -514,47 +729,42 @@ h1 {
 }
 
 .explore-btn {
-  background: linear-gradient(135deg, #8B5A2B, #A67C52);
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 20px;
+  background-color: #8B5A2B;
   color: white;
   border: none;
-  padding: 12px 30px;
+  border-radius: 5px;
   font-size: 1.2rem;
-  border-radius: 50px;
   cursor: pointer;
-  transition: all 0.4s ease;
-  font-family: 'Noto Serif SC', serif;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(139, 90, 43, 0.3);
-  letter-spacing: 1px;
   z-index: 1;
+  text-decoration: none;
 }
 
 .explore-btn::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: all 0.6s ease;
+  background-color: #A67C52;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: -1;
 }
 
 .explore-btn:hover {
-  background: linear-gradient(135deg, #A67C52, #8B5A2B);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(139, 90, 43, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 .explore-btn:hover::before {
-  left: 100%;
-}
-
-.explore-btn:active {
   transform: translateY(0);
-  box-shadow: 0 3px 10px rgba(139, 90, 43, 0.3);
 }
 
 /* 特色部分 */
@@ -698,6 +908,14 @@ h1 {
   z-index: 100;
 }
 
+/* 右上角头像样式 */
+.top-right-avatar {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 200;
+}
+
 .page-dot {
   width: 12px;
   height: 12px;
@@ -720,6 +938,11 @@ h1 {
     margin: 0 20px;
     width: calc(100% - 40px);
     max-width: none;
+  }
+  
+  .top-right-avatar {
+    top: 15px;
+    right: 20px;
   }
   
   .hero h2 {
@@ -756,6 +979,11 @@ h1 {
 @media (max-width: 480px) {
   .hero-text {
     padding: 30px 20px;
+  }
+  
+  .top-right-avatar {
+    top: 10px;
+    right: 15px;
   }
   
   .hero h2 {
