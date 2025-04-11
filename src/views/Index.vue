@@ -137,7 +137,7 @@ import DeepSeekChat from '../components/DeepSeekChat.vue'
 import { useRoute, useRouter } from 'vue-router'
 
 // DeepSeek API密钥
-const deepseekApiKey = 'sk-80ca30dec8f846ea8067f9740256aec6'
+const deepseekApiKey = ''
 
 // 响应式数据
 const isNavFixed = ref(false)
