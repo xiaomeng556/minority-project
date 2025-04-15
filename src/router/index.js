@@ -6,7 +6,9 @@ import Festivals from '@/views/Festivals.vue'
 import EthnicMap from '@/views/EthnicMap.vue' // 民族分布地图页
 import Heritage from '@/views/Heritage.vue' // 非物质文化遗产展示页
 import Profile from '@/views/Profile.vue' // 个人中心页面
-
+import Clothes from '@/views/Clothes.vue' // 民族服饰展示页
+import Art from '@/views/Art.vue' // 艺术展示页
+import About from '@/views/About.vue' // 关于我们页面
 const routes = [
   {
     path: '/',
@@ -27,6 +29,21 @@ const routes = [
     path: '/festivals',
     name: 'Festivals',
     component: Festivals
+  },
+  {
+    path: '/clothes',
+    name: 'Clothes',
+    component: Clothes 
+  },
+  {
+    path: '/art',
+    name: 'Art',
+    component: Art 
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About 
   },
   {
     path: '/ethnic-map',

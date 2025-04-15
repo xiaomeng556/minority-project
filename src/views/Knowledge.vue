@@ -247,7 +247,7 @@
   <style scoped>
   .knowledge-page {
     min-height: 100vh;
-    background-color: #f8f9fa;
+    /* background-color: #e0d6c2; */
     padding-bottom: 50px;
   }
   
@@ -257,14 +257,20 @@
     padding: 0 20px;
   }
   
-  .content-section {
+  /* .content-section {
     background: white;
     padding: 30px;
     border-radius: 10px;
     margin: 30px 0;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  } */
+  .content-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #e0d6c2;
   }
-  
   .section-title {
     font-family: 'Ma Shan Zheng', cursive;
     font-size: 1.8rem;

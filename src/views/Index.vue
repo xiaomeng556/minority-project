@@ -10,6 +10,7 @@
     </div>
     
     <!-- 导航栏 -->
+     <main-nav />
     <nav class="ancient-nav" :class="{ 'fixed-nav': isNavFixed }">
       <ul>
         <li v-for="(item, index) in navItems" :key="index">
