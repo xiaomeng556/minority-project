@@ -122,7 +122,7 @@ const heritageItems = ref([
     title: '侗族大歌',
     ethnic: '侗族',
     description: '侗族大歌是侗族民间多声部合唱形式，被誉为"天籁之音"，2009年被列入UNESCO人类非物质文化遗产名录。',
-    image: 'https://via.placeholder.com/400x250?text=侗族大歌',
+    image: '/minority-project-photo/Heritage/dong-song.jpg',
     isUNESCO: true,
     category: 'music_dance',
     path: '/heritage/dong-song'
@@ -131,7 +131,7 @@ const heritageItems = ref([
     title: '彝族火把节',
     ethnic: '彝族',
     description: '火把节是彝族重要的传统节日，每年农历六月二十四举行，人们手持火把环绕村寨，祈求丰收和平安。',
-    image: 'https://via.placeholder.com/400x250?text=彝族火把节',
+    image: '/minority-project-photo/Heritage/torch-festival.jpg',
     isUNESCO: false,
     category: 'festival',
     path: '/heritage/torch-festival'
@@ -140,7 +140,7 @@ const heritageItems = ref([
     title: '苗族蜡染',
     ethnic: '苗族',
     description: '苗族蜡染是用蜡刻画纹样后染色的传统工艺，图案精美，蕴含丰富的文化寓意，2009年被列入UNESCO非遗名录。',
-    image: 'https://via.placeholder.com/400x250?text=苗族蜡染',
+    image: '/minority-project-photo/Heritage/miao-batik.jpg',
     isUNESCO: true,
     category: 'craft',
     path: '/heritage/miao-batik'
@@ -149,7 +149,7 @@ const heritageItems = ref([
     title: '维吾尔木卡姆',
     ethnic: '维吾尔族',
     description: '木卡姆是维吾尔族的传统音乐艺术，集歌曲、舞蹈、民间音乐于一体，2005年被列入UNESCO人类非遗名录。',
-    image: 'https://via.placeholder.com/400x250?text=维吾尔木卡姆',
+    image: 'minority-project-photo/Heritage/muqam.jpg',
     isUNESCO: true,
     category: 'music_dance',
     path: '/heritage/muqam'
@@ -158,7 +158,7 @@ const heritageItems = ref([
     title: '傣族孔雀舞',
     ethnic: '傣族',
     description: '孔雀舞是傣族传统舞蹈，舞者模仿孔雀优美的姿态，展现出傣族人民对孔雀的崇敬和对美好生活的向往。',
-    image: 'https://via.placeholder.com/400x250?text=傣族孔雀舞',
+    image: 'minority-project-photo/Heritage/peacock-dance.jpg',
     isUNESCO: false,
     category: 'music_dance',
     path: '/heritage/peacock-dance'
@@ -167,7 +167,7 @@ const heritageItems = ref([
     title: '蒙古族长调民歌',
     ethnic: '蒙古族',
     description: '长调民歌是蒙古族传统音乐的代表形式，以高亢、悠远的旋律著称，2005年被列入UNESCO非遗名录。',
-    image: 'https://via.placeholder.com/400x250?text=蒙古族长调',
+    image: 'minority-project-photo/Heritage/mongol-long-song.jpg',
     isUNESCO: true,
     category: 'music_dance',
     path: '/heritage/mongol-long-song'
@@ -176,7 +176,7 @@ const heritageItems = ref([
     title: '布依族传统刺绣',
     ethnic: '布依族',
     description: '布依族刺绣工艺精湛，色彩鲜艳，纹样多以自然景物和生活场景为主题，展现了布依族的审美观念。',
-    image: 'https://via.placeholder.com/400x250?text=布依族刺绣',
+    image: 'minority-project-photo/Heritage/buyi-embroidery.jpg',
     isUNESCO: false,
     category: 'craft',
     path: '/heritage/buyi-embroidery'
@@ -185,7 +185,7 @@ const heritageItems = ref([
     title: '彝族毕摩文化',
     ethnic: '彝族',
     description: '毕摩是彝族传统宗教信仰中的祭司，掌握着彝族的传统文化知识、历史记忆和宗教仪式。',
-    image: 'https://via.placeholder.com/400x250?text=彝族毕摩文化',
+    image: 'minority-project-photo/Heritage/yi-bimo.jpg',
     isUNESCO: false,
     category: 'festival',
     path: '/heritage/yi-bimo'
@@ -194,7 +194,7 @@ const heritageItems = ref([
     title: '壮族铜鼓艺术',
     ethnic: '壮族',
     description: '铜鼓是壮族重要的传统乐器和礼器，铜鼓制作工艺和铜鼓文化体现了壮族的历史智慧。',
-    image: 'https://via.placeholder.com/400x250?text=壮族铜鼓',
+    image: 'minority-project-photo/Heritage/zhuang-bronze-drum.jpg',
     isUNESCO: false,
     category: 'craft',
     path: '/heritage/zhuang-bronze-drum'
@@ -203,7 +203,7 @@ const heritageItems = ref([
     title: '纳西族东巴文化',
     ethnic: '纳西族',
     description: '东巴文化以东巴文字和东巴经为核心，是研究纳西族历史文化的重要资料，2003年入选UNESCO记忆名录。',
-    image: 'https://via.placeholder.com/400x250?text=东巴文化',
+    image: 'minority-project-photo/Heritage/dongba-culture.jpg',
     isUNESCO: true,
     category: 'festival',
     path: '/heritage/dongba-culture'
@@ -212,7 +212,7 @@ const heritageItems = ref([
     title: '藏医药浴法',
     ethnic: '藏族',
     description: '藏医药浴法是藏族传统医学的重要组成部分，通过药物浸泡的方式治疗疾病，2018年被列入UNESCO非遗名录。',
-    image: 'https://via.placeholder.com/400x250?text=藏医药浴法',
+    image: 'minority-project-photo/Heritage/tibetan-medicine-bathing.jpg',
     isUNESCO: true,
     category: 'medicine',
     path: '/heritage/tibetan-medicine-bathing'
@@ -221,7 +221,7 @@ const heritageItems = ref([
     title: '哈尼梯田文化',
     ethnic: '哈尼族',
     description: '哈尼梯田是哈尼族人民创造的农业奇观，体现了人与自然和谐共生的智慧，2013年被列入UNESCO世界遗产名录。',
-    image: 'https://via.placeholder.com/400x250?text=哈尼梯田',
+    image: 'minority-project-photo/Heritage/hani-terraces.jpg',
     isUNESCO: true,
     category: 'craft',
     path: '/heritage/hani-terraces'
@@ -230,7 +230,7 @@ const heritageItems = ref([
     title: '土家族摆手舞',
     ethnic: '土家族',
     description: '摆手舞是土家族重要的传统舞蹈，一般在节庆、丰收或祭祀时表演，表达对自然和祖先的敬畏与感恩。',
-    image: 'https://via.placeholder.com/400x250?text=摆手舞',
+    image: 'minority-project-photo/Heritage/tujia-hand-dance.jpg',
     isUNESCO: false,
     category: 'music_dance',
     path: '/heritage/tujia-hand-dance'
@@ -239,7 +239,7 @@ const heritageItems = ref([
     title: '黎族传统纺染织绣技艺',
     ethnic: '黎族',
     description: '黎族纺织技艺包括纺、染、织、绣等工艺，图案丰富多彩，2009年被列入UNESCO急需保护的非遗名录。',
-    image: 'https://via.placeholder.com/400x250?text=黎族织锦',
+    image: 'minority-project-photo/Heritage/li-textile.jpg',
     isUNESCO: true,
     category: 'craft',
     path: '/heritage/li-textile'
@@ -248,7 +248,7 @@ const heritageItems = ref([
     title: '回族清真饮食文化',
     ethnic: '回族',
     description: '清真饮食文化是回族重要的文化传统，反映了回族的宗教信仰、生活习俗和饮食智慧。',
-    image: 'https://via.placeholder.com/400x250?text=清真饮食',
+    image: 'minority-project-photo/Heritage/hui-halal-food.jpg',
     isUNESCO: false,
     category: 'festival',
     path: '/heritage/hui-halal-food'
@@ -257,7 +257,7 @@ const heritageItems = ref([
     title: '傈僳族刀杆节',
     ethnic: '傈僳族',
     description: '刀杆节是傈僳族传统节日，年轻人攀爬涂满油脂的刀杆，展示勇气和力量，祈求部落繁荣。',
-    image: 'https://via.placeholder.com/400x250?text=刀杆节',
+    image: 'minority-project-photo/Heritage/lisu-knife-pole.jpg',
     isUNESCO: false,
     category: 'festival',
     path: '/heritage/lisu-knife-pole'
