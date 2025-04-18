@@ -60,25 +60,25 @@
       ethnic: '苗族',
       title: '银饰工艺',
       description: '苗族银饰以大为美、以重为美、以多为美，工艺精湛堪称一绝',
-      image: 'https://placeholder.pics/svg/300x200/DEDEDE/555555/苗族银饰'
+      image: '/minority-project-photo/Customs/miaozuyinshi.jpg'
     },
     {
       ethnic: '蒙古族',
       title: '那达慕大会',
       description: '传统体育盛会，包含摔跤、赛马、射箭等蒙古族传统项目',
-      image: 'https://placeholder.pics/svg/300x200/DEDEDE/555555/那达慕大会'
+      image: '/minority-project-photo/Customs/nadamu.jpg'
     },
     {
       ethnic: '傣族',
       title: '泼水节',
       description: '傣历新年庆典，人们互相泼水祝福，寓意洗去过去的不顺',
-      image: 'https://placeholder.pics/svg/300x200/DEDEDE/555555/泼水节'
+      image: '/minority-project-photo/Customs/poshuijie.jpg'
     },
     {
       ethnic: '藏族',
       title: '哈达礼仪',
       description: '献哈达是藏族最普遍的一种礼节，表示对客人热烈的欢迎和诚挚的敬意',
-      image: 'https://placeholder.pics/svg/300x200/DEDEDE/555555/哈达礼仪'
+      image: '/minority-project-photo/Customs/hadaliyi.jpg'
     }
   ])
   </script>
