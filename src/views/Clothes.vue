@@ -53,25 +53,25 @@
       ethnic: '汉族',
       title: '汉服',
       description: '华夏汉民族传统服饰，体现"交领右衽、宽衣博带"的服饰特点',
-      image: 'https://placeholder.pics/svg/300x200/DEDEDE/555555/汉服'
+      image: '/minority-project-photo/Clothes/hanfu.jpg'
     },
     {
       ethnic: '藏族',
       title: '藏袍',
       description: '右衽大襟、长袖宽腰，适应高原气候的独特设计',
-      image: 'https://placeholder.pics/svg/300x200/DEDEDE/555555/藏袍'
+      image: '/minority-project-photo/Clothes/zangpao.jpg'
     },
     {
       ethnic: '维吾尔族',
-      title: '艾德莱斯绸',
+      title: '艾德莱丝绸',
       description: '色彩鲜艳的丝绸服饰，图案具有浓郁的民族特色',
-      image: 'https://placeholder.pics/svg/300x200/DEDEDE/555555/艾德莱斯绸'
+      image: '/minority-project-photo/Clothes/aidelaisichou.jpg'
     },
     {
       ethnic: '彝族',
       title: '查尔瓦',
       description: '羊毛织成的披风，是彝族男女老幼必备的服饰',
-      image: 'https://placeholder.pics/svg/300x200/DEDEDE/555555/查尔瓦'
+      image: '/minority-project-photo/Clothes/caherwa.jpg'
     }
   ])
   </script>
