@@ -58,28 +58,28 @@
       ethnic: '蒙古族',
       title: '马头琴',
       description: '蒙古族传统弦乐器，音色悠扬浑厚，表现草原的辽阔',
-      content: '/minority-project-photo/Art/matouqing.jpg',
+      content: '/minority-project-photo/matouqing.jpg',
       type: 'image'
     },
     {
       ethnic: '傣族',
       title: '孔雀舞',
       description: '模仿孔雀姿态的优美舞蹈，展现傣族人民的艺术天赋',
-      content: '/minority-project-photo/Art/peacock-dance.jpg',
+      content: '/minority-project-photo/Heritage/peacock-dance.jpg',
       type: 'video'
     },
     {
       ethnic: '苗族',
       title: '银饰工艺',
       description: '精湛的金属锻造技艺，打造出精美的银饰艺术品',
-      content: '/minority-project-photo/Art/miaozuyinshi.jpg',
+      content: '/minority-project-photo/Customs/miaozuyinshi.jpg',
       type: 'image'
     },
     {
       ethnic: '藏族',
       title: '唐卡',
       description: '用矿物颜料绘制的宗教卷轴画，色彩鲜艳经久不褪',
-      content: '/minority-project-photo/Art/tangka.jpg',
+      content: '/minority-project-photo/tangka.jpg',
       type: 'image'
     }
   ])
